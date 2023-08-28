@@ -1,5 +1,6 @@
 # MARKET-NXCM2
-** project under construction **
+
+test component shopping store
 
 
 https://github.com/nxbitakinema/NXCM2/assets/93174599/f9205ff0-4fc1-40d6-99c8-d1eaabf171f4
