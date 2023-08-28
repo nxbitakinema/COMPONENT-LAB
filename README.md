@@ -1,4 +1,4 @@
-# MARKET-NXCM2
+# TEST-COMPONENT-STORESTORE
 
 test component shopping store
 
