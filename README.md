@@ -10,3 +10,4 @@ https://github.com/nxbitakinema/NXCM2/assets/93174599/f9205ff0-4fc1-40d6-99c8-d1
 ![CP3](https://github.com/nxbitakinema/NXCM2/assets/93174599/b0be2192-8bfb-47a8-9a1c-8f919df886df)
 
 <iframe src="https://player.vimeo.com/video/858577849?h=1b1d8d0446" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+https://player.vimeo.com/video/858577849?h=1b1d8d0446
