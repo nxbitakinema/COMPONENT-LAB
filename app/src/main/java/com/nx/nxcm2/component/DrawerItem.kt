@@ -22,26 +22,27 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.nx.nxcm2.R
 import com.nx.nxcm2.navigation.Screen
+import com.nx.nxcm2.navigation.ScreenDrawer
 
 @Composable
 fun DrawerItem(
-    item: Screen,
+    itemxx: ScreenDrawer,
     selected: Boolean,
-    onItemClick: (Screen) -> Unit
+    onItemClick: (ScreenDrawer) -> Unit
 ) {
     val background = if (selected) R.color.colorPrimaryDark else android.R.color.transparent
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .clickable(onClick = { onItemClick(item) })
+            .clickable(onClick = {  onItemClick(itemxx)  })
             .height(45.dp)
             .background(colorResource(id = background))
             .padding(start = 10.dp)
     ) {
         Image(
-            painter = painterResource(id = item.icon),
-            contentDescription = item.title,
+            painter = painterResource(id = itemxx.icon),
+            contentDescription = itemxx.title,
             colorFilter = ColorFilter.tint(Color.White),
             contentScale = ContentScale.Fit,
             modifier = Modifier
@@ -50,7 +51,7 @@ fun DrawerItem(
         )
         Spacer(modifier = Modifier.width(7.dp))
         Text(
-            text = item.title,
+            text = itemxx.title,
             fontSize = 18.sp,
             color = Color.White
         )

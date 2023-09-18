@@ -6,60 +6,29 @@ import com.nx.nxcm2.presentation.ScreenTabA
 import com.nx.nxcm2.presentation.ScreenTabB
 import com.nx.nxcm2.presentation.ScreenTabC
 
-//sealed class ScreenBottomNavigationBar(
-//    var route: String,
-//    var icon: ImageVector
-//) {
-//
-//    // BOTTOM NAVIGATION BAR
-//    object Home : ScreenBottomNavigationBar("home", Icons.Filled.Home)
-//    object Music : ScreenBottomNavigationBar("music", Icons.Filled.Search)
-//    object Movies : ScreenBottomNavigationBar("movies", Icons.Rounded.Add)
-//    object Books : ScreenBottomNavigationBar("books", Icons.Filled.FavoriteBorder)
-//    object Profile : ScreenBottomNavigationBar("profile", Icons.Filled.Person)
-//
-//}
-//
-//sealed class ScreenDrawer(
-//    var route: String,
-//    var icon: ImageVector,
-//    var title: String
-//) {
-//    // DRAWER
-//    object Library : ScreenDrawer("library", Icons.Default.List,"LIBRARY")
-//    object Eq : ScreenDrawer("eq", Icons.Default.List, "EQ")
-//    object Sleep : ScreenDrawer("sleep", Icons.Default.Lock, "SLEEP TIME")
-//    object Scan : ScreenDrawer("scan", Icons.Default.Share, "SCAN FILE")
-//    object Clear : ScreenDrawer("clear", Icons.Default.Refresh, "CLEAR")
-//    object Logout : ScreenDrawer("logout", Icons.Default.ArrowBack, "LOG OUT")
-//}
-
-
+// BOTTOM NAVIGATION BAR
 sealed class Screen(
     var route: String,
-    var icon: Int
+    var icon: Int,
 ) {
-
-    // BOTTOM NAVIGATION BAR
     object Home : Screen(
         route = "home",
         icon = R.drawable.ic_home
     )
-    object Music : Screen("music", R.drawable.ic_nectar)
-    object Movies : Screen("movies", R.drawable.ic_payment)
-    object Books : Screen("books", R.drawable.ic_orders)
-    object Profile : Screen("profile", R.drawable.ic_my_details)
-    object Settings : Screen("settings", R.drawable.ic_notification)
+    object Music : Screen("music", R.drawable.ic_home)
+    object Movies : Screen("movies", R.drawable.ic_home)
+    object Books : Screen("books", R.drawable.ic_home)
+    object Profile : Screen("profile", R.drawable.ic_home)
+    object Settings : Screen("settings", R.drawable.ic_home)
 
 }
 
+// DRAWER
 sealed class ScreenDrawer(
     var route: String,
     var icon: Int,
     var title: String
 ) {
-
-    // DRAWER
     object Library : ScreenDrawer(
         route = "library",
         icon = R.drawable.ic_home,
@@ -72,20 +41,7 @@ sealed class ScreenDrawer(
     object Logout : ScreenDrawer("logout", R.drawable.ic_home, "LOG OUT")
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// for TAB
+// TAB
 // To be able to retrieve a View (Screen)
 // from a list (you’ll see what I’m talking about later)
 // as @Composable and not as Unit type,

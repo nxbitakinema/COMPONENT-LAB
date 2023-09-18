@@ -47,22 +47,22 @@ fun NavGraph(
         }
 
         // DRAWER
-        composable(Screen.Library.route) {
+        composable(ScreenDrawer.Library.route) {
             ScreenDrawerA()
         }
-        composable(Screen.Eq.route) {
+        composable(ScreenDrawer.Eq.route) {
             ScreenDrawerB()
         }
-        composable(Screen.Sleep.route) {
+        composable(ScreenDrawer.Sleep.route) {
             ScreenDrawerC()
         }
-        composable(Screen.Scan.route) {
+        composable(ScreenDrawer.Scan.route) {
             ScreenDrawerD()
         }
-        composable(Screen.Clear.route) {
+        composable(ScreenDrawer.Clear.route) {
             ScreenDrawerE()
         }
-        composable(Screen.Logout.route) {
+        composable(ScreenDrawer.Logout.route) {
             ScreenDrawerF()
         }
 

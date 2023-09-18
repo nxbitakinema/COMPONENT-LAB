@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.nx.nxcm2.R
-import com.nx.nxcm2.navigation.Screen
+import com.nx.nxcm2.navigation.ScreenDrawer
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -30,13 +30,13 @@ fun Drawer(
     scaffoldState: ScaffoldState,
     navController: NavController
 ) {
-    val items = listOf(
-        Screen.Library,
-        Screen.Eq,
-        Screen.Sleep,
-        Screen.Scan,
-        Screen.Clear,
-        Screen.Logout
+    val itemx = listOf(
+        ScreenDrawer.Library,
+        ScreenDrawer.Eq,
+        ScreenDrawer.Sleep,
+        ScreenDrawer.Scan,
+        ScreenDrawer.Clear,
+        ScreenDrawer.Logout
     )
     Column {
         // Header
@@ -57,9 +57,9 @@ fun Drawer(
         // List of navigation items
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentRoute = navBackStackEntry?.destination?.route
-        items.forEach { item ->
-            DrawerItem(item = item, selected = currentRoute == item.route, onItemClick = {
-                navController.navigate(item.route) {
+        itemx.forEach { iii ->
+            DrawerItem(itemxx = iii, selected = currentRoute == iii.route, onItemClick = {
+                navController.navigate(iii.route) {
                     // Pop up to the start destination of the graph to
                     // avoid building up a large stack of destinations
                     // on the back stack as users select items
@@ -79,7 +79,7 @@ fun Drawer(
         }
         Spacer(modifier = Modifier.weight(1f))
         Text(
-            text = "Developed by John Codeos",
+            text = "name company xxx",
             color = Color.White,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.Bold,

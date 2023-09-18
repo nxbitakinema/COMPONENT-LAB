@@ -37,9 +37,9 @@ fun SliderBanner(
 ) {
     val pagerState = rememberPagerState(initialPage = 0)
     val imageSlider = listOf(
-        painterResource(id = R.drawable.img_banner1),
-        painterResource(id = R.drawable.img_banner2),
-        painterResource(id = R.drawable.img_banner3)
+        painterResource(id = R.drawable.img_silder_01),
+        painterResource(id = R.drawable.img_silder_02),
+        painterResource(id = R.drawable.img_silder_03)
     )
 
     LaunchedEffect(Unit) {
